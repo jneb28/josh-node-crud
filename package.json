@@ -1,0 +1,23 @@
+{
+  "name": "josh-node-crud",
+  "version": "1.0.0",
+  "description": "a node express crud server using mogodb and mongoose",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jneb28/josh-node-crud.git"
+  },
+  "author": "joshua nebeker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jneb28/josh-node-crud/issues"
+  },
+  "homepage": "https://github.com/jneb28/josh-node-crud#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
