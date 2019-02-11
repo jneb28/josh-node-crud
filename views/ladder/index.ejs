@@ -1,0 +1,24 @@
+<%- include('../includes/head.ejs') %>
+</head>
+<body>
+  <%- include('../includes/nav.ejs') %>
+
+  <main>
+    <h1>Current Ladder</h1>
+    <% if(players.length > 0) { %>
+      <div class="grid-layout">
+        <% for(let player of players) { %>
+          <div class="grid-item">
+            <h2><%= player._id %>: <%= player.name %> </h2>
+            <p>Wins: <%= player.wins %></p>
+            <p>Losses: <%= player.losses %></p>
+            <p>Race: <%= player.race %></p>
+          </div>
+        <% } %>
+      </div>
+    <% } else { %>
+      <h4>Ladder results unavailable</h2>
+    <% } %>
+  </main>
+
+<%- include('../includes/foot.ejs') %>
