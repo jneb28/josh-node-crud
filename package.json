@@ -17,6 +17,9 @@
     "url": "https://github.com/jneb28/josh-node-crud/issues"
   },
   "homepage": "https://github.com/jneb28/josh-node-crud#readme",
+  "engines": {
+    "node": "11.9.0"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
