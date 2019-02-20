@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/jneb28/josh-node-crud#readme",
   "engines": {
-    "node": "11.9.0"
+    "node": "11.9.0",
+    "npm": "6.5.0"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
