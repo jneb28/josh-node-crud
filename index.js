@@ -22,11 +22,8 @@ mongoose.connect('mongodb+srv://jneb:likgvQyckdgq9psk@cluster0-qbjhd.mongodb.net
 .then(result => {
   console.log('Connected!');
   
-  //app.listen(process.env.PORT || 5000);
-  var server = app.listen(process.env.PORT || 5000, function () {
-    var port = server.address().port;
-    console.log("Express is working on port " + port);
-  });
+  app.listen(process.env.PORT || 5000);
+  
 })
 .catch(err => {
   console.log(err);
