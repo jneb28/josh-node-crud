@@ -21,7 +21,8 @@ mongoose.connect('mongodb+srv://jneb:likgvQyckdgq9psk@cluster0-qbjhd.mongodb.net
 .then(result => {
   console.log('Connected!');
   //console.log(result);
-  app.listen(port);
+  app.listen(process.env.PORT || 5000);
+  //port 
 })
 .catch(err => {
   console.log(err);
