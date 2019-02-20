@@ -19,7 +19,7 @@ app.use(ladderRoutes);
 app.use(playerRoutes);
 
 
-
+console.log(process.env.MONGODB_URI);
 //mongoose.connect('mongodb+srv://jneb:likgvQyckdgq9psk@cluster0-qbjhd.mongodb.net/test?retryWrites=true')
 mongoose.connect(process.env.MONGODB_URI)
 .then(result => {

@@ -1,4 +1,3 @@
-
 const Player = require('../models/player.js');
 
 exports.getLadder = (req, res, next) => {
