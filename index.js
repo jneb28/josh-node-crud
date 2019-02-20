@@ -4,7 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -21,7 +21,7 @@ mongoose.connect('mongodb+srv://jneb:likgvQyckdgq9psk@cluster0-qbjhd.mongodb.net
 .then(result => {
   console.log('Connected!');
   //console.log(result);
-  app.listen(process.env.PORT || 5000);
+  app.listen(port);
   //port 
 })
 .catch(err => {
