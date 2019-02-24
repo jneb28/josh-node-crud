@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const Player = require('../models/player.js')
+const Player = require('../models/player.js');
+const Ladder = require('../controllers/ladder.js');
 
 exports.addPlayer = (req, res, next) => {
   res.render('player/create.ejs', {
@@ -79,12 +80,11 @@ exports.deletePlayer = (req, res, next) => {
 
 exports.getPlayers = (req, res, next) => {
   Player.find()
-  .then(result => {
-    console.log(result);
+  .then(players => {
     res.render('ladder/index.ejs', {
       path: '/',
       title: 'Current Ladder',
-      players: result
+      players: players
     });
   })
   .catch(err => console.log(err));

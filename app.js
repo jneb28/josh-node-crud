@@ -12,7 +12,9 @@ app.set('views', 'views');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
+const ladderRoutes = require('./routes/ladder.js');
 const playerRoutes = require('./routes/player.js');
+app.use(ladderRoutes).getLadder;
 app.use(playerRoutes);
 
 mongoose.connect(process.env.MONGODB_URI)
