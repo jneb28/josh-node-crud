@@ -18,11 +18,11 @@ const PlayerSchema = new Schema({
   race: {
     type: String,
     required: true
-  },
-  id: {
-    type: Schema.Types.ObjectId,
-    required: true
   }
+  // id: {
+  //   type: Schema.Types.ObjectId,
+  //   required: true
+  // }
 });
 
 module.exports = mongoose.model('Player', PlayerSchema);
