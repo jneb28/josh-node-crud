@@ -109,7 +109,7 @@ exports.updatePlayer = (req, res, next) => {
 // };
 exports.deletePlayer = (req, res, next) => {
   Player.findByIdAndRemove(
-    req.params.id,
+    req.params._id,
     (err) => {
       if(err) return next(err);
       res.send('Player Deleted!');
