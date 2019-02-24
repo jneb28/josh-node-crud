@@ -61,7 +61,7 @@ exports.postPlayer = (req, res, next) => {
 //   .catch(err => console.log(err));
 // };
 exports.viewPlayer = (req, res, next) => {
-  Player.findOne({ name: req.params.id })
+  Player.findOne({ id: req.params._id })
   .then((player) => res.json(player));
 };
 
@@ -88,7 +88,7 @@ exports.viewPlayer = (req, res, next) => {
 // };
 exports.updatePlayer = (req, res, next) => {
   Player.findByIdAndUpdate(
-    req.params.id,
+    req.params._id,
     { $set: req.body },
     (err) => {
       if(err) return next(err);
