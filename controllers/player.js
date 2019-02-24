@@ -56,7 +56,7 @@ exports.postPlayer = (req, res, next) => {
 //   .catch(err => console.log(err));
 // };
 exports.viewPlayer = (req, res, next) => {
-  Player.findOne({ id: req.params.id })
+  Player.findById(req.params.id)
   .then((player) => res.json(player));
 };
 
