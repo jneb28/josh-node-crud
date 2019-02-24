@@ -35,12 +35,13 @@ exports.postPlayer = (req, res, next) => {
   const losses = req.body.losses;
   const race = req.body.race;
 
-  const player = new Player({
-    name: name,
-    wins: wins,
-    losses: losses,
-    race: race
-  });
+  // const player = new Player({
+  //   name: name,
+  //   wins: wins,
+  //   losses: losses,
+  //   race: race
+  // });
+  const player = new Player(req.body);
 
   player.save(function(err) {
     if(err) return next(err);
