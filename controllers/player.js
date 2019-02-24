@@ -77,15 +77,3 @@ exports.deletePlayer = (req, res, next) => {
   })
   .catch(err => console.log(err));
 };
-
-// exports.getPlayers = (req, res, next) => {
-//   Player.find()
-//   .then(players => {
-//     res.render('ladder/index.ejs', {
-//       path: '/',
-//       title: 'Current Ladder',
-//       players: players
-//     });
-//   })
-//   .catch(err => console.log(err));
-// };

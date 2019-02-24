@@ -62,3 +62,6 @@ h1 {
 .grid-item p {
   margin-bottom: 6px;
 }
+.grid-item a {
+  color: #f2f2f2;
+}
