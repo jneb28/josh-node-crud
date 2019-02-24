@@ -17,13 +17,13 @@ See [Player Model](https://github.com/jneb28/josh-node-crud/blob/master/models/p
 #### 2. Cloud-based MongoDB as your data store
 See [app.js](https://github.com/jneb28/josh-node-crud/blob/master/app.js)
 #### 3. At least 3 endpoints to GET data from your server
-See [Player Controller](https://github.com/jneb28/josh-node-crud/blob/master/controllers/player.js)
+See [Player Routes](https://github.com/jneb28/josh-node-crud/blob/master/routes/player.js) & [Player Controller](https://github.com/jneb28/josh-node-crud/blob/master/controllers/player.js)
 #### 4. At least 1 endpoint allowing user to update an item via PUT or PATCH HTTP verbs
-See [Player Controller](https://github.com/jneb28/josh-node-crud/blob/master/controllers/player.js)
+See [Player Routes](https://github.com/jneb28/josh-node-crud/blob/master/routes/player.js) & [Player Controller](https://github.com/jneb28/josh-node-crud/blob/master/controllers/player.js)
 #### 5. At least 1 endpoint allowing user to create an item via POST
-See [Player Controller](https://github.com/jneb28/josh-node-crud/blob/master/controllers/player.js)
+See [Player Routes](https://github.com/jneb28/josh-node-crud/blob/master/routes/player.js) & [Player Controller](https://github.com/jneb28/josh-node-crud/blob/master/controllers/player.js)
 #### 6. At least 1 endpoint allowing user to delete an item via DELETE
-See [Player Controller](https://github.com/jneb28/josh-node-crud/blob/master/controllers/player.js)
+See [Player Routes](https://github.com/jneb28/josh-node-crud/blob/master/routes/player.js) & [Player Controller](https://github.com/jneb28/josh-node-crud/blob/master/controllers/player.js)
 #### 7. Your datastore will contain at least 25 items
 See [Ladder](https://protected-caverns-48661.herokuapp.com/)
 #### 8. Your app will be deployed to production using some service like Heroku, Digital Ocean, etc.
