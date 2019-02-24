@@ -27,10 +27,13 @@
       <div class="form-input">
         <a href="/">Back</a>
         <input type="submit" value="Update">
-        <form action="/delete-player" method="POST">
-          <input type="hidden" name="id" value="<%= player._id %>">
-          <input type="submit" value="Delete">
-        </form>
+      </div>
+    </form>
+    
+    <form action="/delete-player" method="POST">
+      <div class="form-input">
+        <input type="hidden" name="id" value="<%= player._id %>">
+        <input type="submit" value="Delete">
       </div>
     </form>
   </main>
