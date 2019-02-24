@@ -29,9 +29,20 @@ exports.postPlayer = (req, res, next) => {
     console.log('Player Added!');
     res.redirect('/');
   })
-  .catch(err => {
-    console.log(err);
-  });
+  .catch(err => console.log(err));
+};
+
+exports.viewPlayer = (req, res, next) => {
+  const playerId = req.params.playerId;
+  Player.findById(playerId)
+  .then(player => {
+    res.render('player/view.ejs', {
+      path: '/view-player',
+      player: player,
+      title: player.name
+    });
+  })
+  .catch(err => console.log(err));
 };
 
 exports.getPlayers = (req, res, next) => {
@@ -44,7 +55,5 @@ exports.getPlayers = (req, res, next) => {
       players: result
     });
   })
-  .catch(err => {
-    console.log(err);
-  });
+  .catch(err => console.log(err));
 };

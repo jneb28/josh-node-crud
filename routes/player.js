@@ -7,8 +7,6 @@ router.get('/add-player', PlayerController.addPlayer);
 
 router.post('/add-player', PlayerController.postPlayer);
 
-//router.get('/add-player', ladderController.addPlayer);
-
-//router.post();
+router.get('/view-player/:playerId', PlayerController.viewPlayer);
 
 module.exports = router;

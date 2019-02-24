@@ -1,0 +1,35 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+  <%- include('../includes/nav.ejs') %>
+
+  <main>
+    <h1>Add Player</h1>
+    <form action="/update-player" method="POST">
+      <div class="form-input">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" value="<%= player.name %>">
+      </div>
+      <div class="form-input">
+          <label for="wins">Wins</label>
+          <input type="text" name="wins" id="wins" value="<%= player.wins %>">
+      </div>
+      <div class="form-input">
+          <label for="losses">Losses</label>
+          <input type="text" name="losses" id="losses" value="<%= player.losses %>">
+      </div>
+      <div class="form-input">
+          <label for="race">Race</label>
+          <input type="text" name="race" id="race" value="<%= player.race %>">
+      </div>
+
+      <input type="hidden" name="id" value="<%= player._id %>">
+      
+      <div class="form-input">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </main>
+  
+<%- include('../includes/foot.ejs') %>
