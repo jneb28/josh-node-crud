@@ -5,7 +5,7 @@
   <%- include('../includes/nav.ejs') %>
 
   <main>
-    <h1>Add Player</h1>
+    <h1>Player Info</h1>
     <form action="/update-player" method="POST">
       <div class="form-input">
           <label for="name">Name</label>
@@ -27,7 +27,7 @@
       <div class="form-input">
         <a href="/">Back</a>
         <input type="submit" value="Update">
-        <form action="/delete-player">
+        <form action="/delete-player" method="POST">
           <input type="hidden" name="id" value="<%= player._id %>">
           <input type="submit" value="Delete">
         </form>
