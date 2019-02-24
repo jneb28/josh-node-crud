@@ -12,7 +12,7 @@ router.get('/view-player/:name', PlayerController.viewPlayer);
 
 router.put('/update-player', PlayerController.updatePlayer);
 
-router.delete('/delete-player', PlayerController.deletePlayer);
+router.delete('/delete-player/:name', PlayerController.deletePlayer);
 
 router.get('/', PlayerController.getPlayers);
 
