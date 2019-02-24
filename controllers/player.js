@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
-
 const Player = require('../models/player.js');
-const Ladder = require('../controllers/ladder.js');
 
 exports.addPlayer = (req, res, next) => {
   res.render('player/create.ejs', {
@@ -20,7 +18,7 @@ exports.postPlayer = (req, res, next) => {
     wins: wins,
     losses: losses,
     race: race,
-    id: new mongoose.mongo.ObjectId() //player._id
+    id: new mongoose.mongo.ObjectId()
   });
   player
   .save()

@@ -5,3 +5,5 @@ const Schema = mongoose.Schema;
 const LadderSchema = new Schema({
   
 });
+
+module.exports = mongoose.model('Ladder', LadderSchema);
