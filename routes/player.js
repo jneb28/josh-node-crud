@@ -9,4 +9,8 @@ router.post('/add-player', PlayerController.postPlayer);
 
 router.get('/view-player/:playerId', PlayerController.viewPlayer);
 
+router.post('/update-player', PlayerController.updatePlayer);
+
+router.post('/delete-player', PlayerController.deletePlayer);
+
 module.exports = router;

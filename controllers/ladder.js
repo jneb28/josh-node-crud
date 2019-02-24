@@ -5,7 +5,7 @@ exports.getLadder = (req, res, next) => {
   .then(result => {
     res.render('ladder/index.ejs', {
       path: '/',
-      title: 'Current Ladder',
+      title: 'Ladder',
       players: result
     });
   })

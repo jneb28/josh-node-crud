@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-const Ladder = require('../models/ladder.js');
 const Player = require('../models/player.js')
 
 exports.addPlayer = (req, res, next) => {
@@ -41,6 +40,39 @@ exports.viewPlayer = (req, res, next) => {
       player: player,
       title: player.name
     });
+  })
+  .catch(err => console.log(err));
+};
+
+exports.updatePlayer = (req, res, next) => {
+  const playerId = req.body.id;
+  const name = req.body.name;
+  const wins = req.body.wins;
+  const losses = req.body.losses;
+  const race = req.body.race;
+
+  Player.findById(playerId)
+  .then(player => {
+    player.name = name;
+    player.wins = wins;
+    player.losses = losses;
+    player.race = race;
+    return player.save();
+  })
+  .then(result => {
+    console.log('Player Updated!');
+    res.redirect('/');
+  })
+  .catch(err => console.log(err));
+};
+
+exports.deletePlayer = (req, res, next) => {
+  const playerId = req.body.id;
+
+  Player.findByIdAndRemove(playerId)
+  .then(() => {
+    console.log('Player Deleted!');
+    res.redirect('/');
   })
   .catch(err => console.log(err));
 };
