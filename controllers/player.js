@@ -61,7 +61,7 @@ exports.postPlayer = (req, res, next) => {
 //   .catch(err => console.log(err));
 // };
 exports.viewPlayer = (req, res, next) => {
-  Player.findOne({ id: req.params._id })
+  Player.findOne({ id: req.params.id })
   .then((player) => res.json(player));
 };
 
@@ -88,7 +88,7 @@ exports.viewPlayer = (req, res, next) => {
 // };
 exports.updatePlayer = (req, res, next) => {
   Player.findByIdAndUpdate(
-    req.params._id,
+    req.params.id,
     { $set: req.body },
     (err) => {
       if(err) return next(err);
@@ -109,7 +109,7 @@ exports.updatePlayer = (req, res, next) => {
 // };
 exports.deletePlayer = (req, res, next) => {
   Player.findByIdAndRemove(
-    req.params._id,
+    req.params.id,
     (err) => {
       if(err) return next(err);
       res.send('Player Deleted!');

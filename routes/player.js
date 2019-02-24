@@ -8,11 +8,11 @@ const PlayerController = require('../controllers/player.js');
 router.post('/add-player', PlayerController.postPlayer);
 
 //router.get('/view-player/:playerId', PlayerController.viewPlayer);
-router.get('/:_id/view-player', PlayerController.viewPlayer);
+router.get('/:id/view-player', PlayerController.viewPlayer);
 
-router.put('/:_id/update-player', PlayerController.updatePlayer);
+router.put('/:id/update-player', PlayerController.updatePlayer);
 
-router.delete('/:_id/delete-player', PlayerController.deletePlayer);
+router.delete('/:id/delete-player', PlayerController.deletePlayer);
 
 router.get('/', PlayerController.getPlayers);
 
