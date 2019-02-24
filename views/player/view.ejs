@@ -25,15 +25,15 @@
       </div>
       
       <div class="form-input">
-        <a href="/">Back</a>
-        <input type="submit" value="Update">
+        <a class="back" href="/">Back</a>
+        <input class="update-input" type="submit" value="Update">
       </div>
     </form>
-    
-    <form action="/delete-player" method="POST">
+
+    <form class="delete-form" action="/delete-player" method="POST">
       <div class="form-input">
         <input type="hidden" name="id" value="<%= player._id %>">
-        <input type="submit" value="Delete">
+        <input class="delete-input" type="submit" value="Delete">
       </div>
     </form>
   </main>
