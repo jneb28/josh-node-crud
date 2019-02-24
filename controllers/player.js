@@ -30,18 +30,12 @@ const Player = require('../models/player.js');
 //   .catch(err => console.log(err));
 // };
 exports.postPlayer = (req, res, next) => {
-  const name = req.body.name;
-  const wins = req.body.wins;
-  const losses = req.body.losses;
-  const race = req.body.race;
-  const id = new mongoose.mongo.ObjectId()
-
   const player = new Player({
-    name: name,
-    wins: wins,
-    losses: losses,
-    race: race,
-    id: id
+    name: req.body.name,
+    wins: req.body.wins,
+    losses: req.body.losses,
+    race: req.body.race,
+    id: new mongoose.mongo.ObjectId()
   });
 
   player.save(function(err) {
