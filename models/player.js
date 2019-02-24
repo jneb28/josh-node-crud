@@ -18,10 +18,6 @@ const PlayerSchema = new Schema({
   race: {
     type: String,
     required: true
-  },
-  id: {
-    type: Schema.Types.ObjectId,
-    required: true
   }
 });
 
