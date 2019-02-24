@@ -110,7 +110,6 @@ exports.updatePlayer = (req, res, next) => {
 exports.deletePlayer = (req, res, next) => {
   Player.findByIdAndRemove(
     req.params.id,
-    { $set: req.body },
     (err) => {
       if(err) return next(err);
       res.send('Player Deleted!');
