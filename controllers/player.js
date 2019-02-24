@@ -63,7 +63,7 @@ exports.postPlayer = (req, res, next) => {
 // };
 exports.viewPlayer = (req, res, next) => {
   Player.findOne({ name: req.params.name })
-  .then(player => res.json(player));
+  .then((player) => res.json(player));
 };
 
 // exports.updatePlayer = (req, res, next) => {
@@ -132,5 +132,5 @@ exports.deletePlayer = (req, res, next) => {
 // };
 exports.getPlayers = (req, res) => {
   Player.find()
-  .then(players => res.json(players));
+  .then((players) => res.json(players));
 }
