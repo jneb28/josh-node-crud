@@ -13,6 +13,7 @@ router.put('/update-player', PlayerController.updatePlayer);
 
 router.delete('/delete-player', PlayerController.deletePlayer);
 
-router.get('/', PlayerController.getPlayers);
+//router.get('/', PlayerController.getPlayers);
+router.get('/', PlayerController.players);
 
 module.exports = router;

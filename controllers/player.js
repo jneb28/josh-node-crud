@@ -87,3 +87,8 @@ exports.getPlayers = (req, res, next) => {
   })
   .catch(err => console.log(err));
 };
+
+exports.players = (req, res) => {
+  Player.find()
+  .then(players => res.json(players));
+}
