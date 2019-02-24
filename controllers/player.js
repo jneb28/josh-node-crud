@@ -39,8 +39,7 @@ exports.postPlayer = (req, res, next) => {
     name: name,
     wins: wins,
     losses: losses,
-    race: race,
-    id: new mongoose.mongo.ObjectId()
+    race: race
   });
 
   player.save(function(err) {
