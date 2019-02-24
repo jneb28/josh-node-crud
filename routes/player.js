@@ -10,7 +10,7 @@ router.post('/add-player', PlayerController.postPlayer);
 //router.get('/view-player/:playerId', PlayerController.viewPlayer);
 router.get('/view-player/:name', PlayerController.viewPlayer);
 
-router.put('/update-player', PlayerController.updatePlayer);
+router.put('/update-player/:id', PlayerController.updatePlayer);
 
 router.delete('/delete-player/:name', PlayerController.deletePlayer);
 
