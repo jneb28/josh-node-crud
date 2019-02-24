@@ -19,8 +19,8 @@ app.use(playerRoutes);
 mongoose.connect(process.env.MONGODB_URI)
 .then(result => {
   console.log('Connected to Cluster!');
-  
-  mongodb.players.aggregate([
+
+  mongodb.test.aggregate([
     {
       $addFields: {
         $winRatio: {"$multiply": [ { "$divide": ["$wins","$losses"] }, 100 ]}
