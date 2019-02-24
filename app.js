@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 const playerRoutes = require('./routes/player.js');
 app.use(playerRoutes);
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true})
 .then(result => {
   console.log('Connected to Cluster!');
   app.listen(process.env.PORT || port);
