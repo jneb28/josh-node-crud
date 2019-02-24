@@ -4,7 +4,7 @@
   <%- include('../includes/nav.ejs') %>
 
   <main>
-    <h1>Current Ladder</h1>
+    <h1>Ladder</h1>
     <% if(players.length > 0) { %>
       <div class="grid-layout">
         <% for(let player of players) { %>
@@ -13,7 +13,7 @@
             <p>Wins: <%= player.wins %></p>
             <p>Losses: <%= player.losses %></p>
             <p>Race: <%= player.race %></p>
-            <a href="/view-player/<%= player._id %>">More Info. >></a>
+            <a href="/view-player/<%= player._id %>">More Info >></a>
           </div>
         <% } %>
       </div>
