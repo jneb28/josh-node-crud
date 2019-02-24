@@ -7,7 +7,8 @@ const PlayerController = require('../controllers/player.js');
 
 router.post('/add-player', PlayerController.postPlayer);
 
-router.get('/view-player/:playerId', PlayerController.viewPlayer);
+//router.get('/view-player/:playerId', PlayerController.viewPlayer);
+router.get('/view-player/:name', PlayerController.viewPlayer);
 
 router.put('/update-player', PlayerController.updatePlayer);
 
