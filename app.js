@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const playerRoutes = require('./routes/player.js');
 
 const app = express();
+const URI = 'mongodb+srv://jneb:likgvQyckdgq9psk@cluster0-qbjhd.mongodb.net/ladder?retryWrites=true';
+const port = 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -15,9 +17,9 @@ app.use((req, res, next) => {
 })
 app.use(playerRoutes);
 
-mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true})
+mongoose.connect(URI, {useNewUrlParser: true})
 .then(result => {
   console.log('Connected to Cluster!');
-  app.listen(process.env.PORT);
+  app.listen(port);
 })
 .catch(err => console.log(err));
