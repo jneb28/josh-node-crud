@@ -1,5 +1,5 @@
 # josh-node-crud
-a node express crud server using mogodb and mongoose
+a node express CRUD server using mongoose
 
 ## Project setup
 ```
