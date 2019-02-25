@@ -17,11 +17,6 @@ const PlayerSchema = new Schema({
   race: {
     type: String,
     required: true
-  },
-  winRatio: {
-    type: Number,
-    required: true,
-    default: 0
   }
 });
 
