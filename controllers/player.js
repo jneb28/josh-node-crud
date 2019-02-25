@@ -1,5 +1,3 @@
-const mongoose = require('mongoose');
-const db = mongoose.connection;
 const Player = require('../models/player.js');
 
 exports.postPlayer = (req, res, next) => {

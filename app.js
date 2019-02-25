@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 const playerRoutes = require('./routes/player.js');
 
 const app = express();
-const URI = 'mongodb+srv://jneb:likgvQyckdgq9psk@cluster0-qbjhd.mongodb.net/ladder?retryWrites=true';
-const port = 3000;
+const URI = process.env.MONGODB_URI;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
