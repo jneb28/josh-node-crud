@@ -10,6 +10,8 @@ router.put('/update-player/:id', PlayerController.updatePlayer);
 
 router.delete('/delete-player/:id', PlayerController.deletePlayer);
 
+router.get('/top10', PlayerController.topTen);
+
 router.get('/', PlayerController.getPlayers);
 
 module.exports = router;

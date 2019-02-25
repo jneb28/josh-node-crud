@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+const db = mongoose.connection;
 const Player = require('../models/player.js');
 
 exports.postPlayer = (req, res, next) => {
@@ -38,6 +40,13 @@ exports.deletePlayer = (req, res, next) => {
       res.send('Player Deleted!');
     }
   );
+};
+
+exports.topTen = (req, res, next) => {
+  Player.find()
+    .sort({ wins: -1 })
+    .limit(10)
+    .then((players) => res.json(players));
 };
 
 exports.getPlayers = (req, res) => {
