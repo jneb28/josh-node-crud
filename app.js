@@ -5,7 +5,7 @@ const playerRoutes = require('./routes/player.js');
 var cors = require('cors')
 
 const app = express();
-const URI = process.env.MONGODB_URI;
+const URI = process.env.MONGODB_URI || 'mongodb+srv://jneb:likgvQyckdgq9psk@cluster0-qbjhd.mongodb.net/ladder?retryWrites=true';
 const port = process.env.PORT || 3000;
 
 app.use(cors());
