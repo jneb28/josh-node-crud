@@ -17,7 +17,11 @@ const PlayerSchema = new Schema({
   race: {
     type: String,
     required: true
-  }
-});
+  },
+  realm: {
+      type: String,
+      required: true
+    }
+  });
 
-module.exports = mongoose.model('Player', PlayerSchema);
+module.exports = mongoose.model('Player', PlayerSchema, 'players');

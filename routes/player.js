@@ -10,8 +10,10 @@ router.put('/update-player/:id', PlayerController.updatePlayer);
 
 router.delete('/delete-player/:id', PlayerController.deletePlayer);
 
+router.get('/view-realm/:realm', PlayerController.getRealm);
+
 router.get('/top10', PlayerController.topTen);
 
-router.get('/', PlayerController.getPlayers);
+router.get('/', PlayerController.getPlayers); 
 
 module.exports = router;

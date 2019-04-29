@@ -5,7 +5,8 @@ exports.postPlayer = (req, res, next) => {
     name: req.body.name,
     wins: req.body.wins,
     losses: req.body.losses,
-    race: req.body.race
+    race: req.body.race,
+    realm: req.body.realm
   });
 
   player.save(function(err) {
@@ -15,8 +16,8 @@ exports.postPlayer = (req, res, next) => {
 };
 
 exports.viewPlayer = (req, res, next) => {
-  Player.findById(req.params.id)
-  .then((player) => res.json(player));
+  Player.findOne({ _id: req.params.id })
+  .then(player => res.json(player));
 };
 
 exports.updatePlayer = (req, res, next) => {
@@ -49,5 +50,12 @@ exports.topTen = (req, res, next) => {
 
 exports.getPlayers = (req, res) => {
   Player.find()
-  .then((players) => res.json(players));
+  .then(players => {
+    res.json(players);
+  });
+};
+
+exports.getRealm = (req, res) => {
+  Player.find({realm: req.params.realm})
+  .then(realm => res.json(realm));
 }
